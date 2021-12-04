@@ -1,10 +1,10 @@
 //The URIs of the REST endpoint
-IUPS = "https://prod-21.northeurope.logic.azure.com:443/workflows/edc2a3da13e442d191b0ecd3928b6cd1/versions/08585638448633974877/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Fversions%2F08585638448633974877%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4HqwrZMWAB5i_145dZrRFOEJ8JVoQa7kWSYhCYIazj0";
-RAI = "https://prod-21.northeurope.logic.azure.com:443/workflows/edc2a3da13e442d191b0ecd3928b6cd1/versions/08585638341013660249/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Fversions%2F08585638341013660249%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=D0Tf6fxxXA-oAlqLD5DO_ThtYk0gXTtYDpgsJH3bxYk";
-baseDAI = "https://prod-21.northeurope.logic.azure.com/workflows/edc2a3da13e442d191b0ecd3928b6cd1/versions/08585637595693042086/triggers/manual/paths/invoke/rest/v1/images/";
-endDAI = "?api-version=2016-10-01&sp=%2Fversions%2F08585637595693042086%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pBVFBUIOoAyXFd3V-JR69Ue_9MC7TmGaKIik_3wbHag";
-baseEAI="https://prod-21.northeurope.logic.azure.com/workflows/edc2a3da13e442d191b0ecd3928b6cd1/triggers/manual/paths/invoke/rest/v1/images/";
-endEAI="?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=c1QL0nvPY6N_dPhuHbFBEBphmPpUkUBcSIt9q58O4Zo";
+IUPS = "https://prod-236.westeurope.logic.azure.com:443/workflows/37da32c376f3455a849042465c6ca58a/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rV2RJ4KKftoM13ES54EfkRAQdqeVNBIt2WTE-Txj4q8";
+RAI = "https://prod-55.westeurope.logic.azure.com:443/workflows/1058f64d538849bfab4c08054b2be9ad/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vgmxDg77LY1STzTxJtOpTkgTQOB4f3UCJJ7OY_oEeLA";
+baseDAI = "https://prod-222.westeurope.logic.azure.com/workflows/25e8cff2ac09496c9da231a5fb69212d/triggers/manual/paths/invoke/rest/v1/images/";
+endDAI = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Y8i9O63SOHtPxKnYlne1hu3lrVDFg-W38fY77acaDV4";
+baseEAI="https://prod-50.westeurope.logic.azure.com/workflows/ca43ddb178774ebcac0cbb8d4106d717/triggers/manual/paths/invoke/rest/v1/images/";
+endEAI="?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=B3OOdL7rHds__Y1O_16CZDtKcU3_O2VKXe7Y2CcIV7I";
 signupURL = "https://prod-21.northeurope.logic.azure.com:443/workflows/edc2a3da13e442d191b0ecd3928b6cd1/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=c1QL0nvPY6N_dPhuHbFBEBphmPpUkUBcSIt9q58O4Zo"
 
 
