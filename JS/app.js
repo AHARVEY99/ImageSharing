@@ -37,17 +37,17 @@ $(document).ready(function() {
     
   }); 
 
-  $("#signupForm").click(function(){
-
-    //Execute the register user function
-    signup();
-    
-  }); 
-
   $("#loginForm").click(function(){
 
     //Execute the register user function
     login();
+    
+  }); 
+
+  $("#signupForm").click(function(){
+
+    //Execute the register user function
+    signup();
     
   }); 
 
