@@ -108,9 +108,7 @@ function getImages(){
   let x = 1;
    //Iterate through the returned records and build HTML, incorporating the key values of the record in the data
    $.each( data, function( key, val ) {
-    
      alert(BLOB_ACCOUNT + val["filePath"])
-     
    items.push( "<hr />");
    items.push("<img src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400'/> <br />")
    items.push( "File : " + val["fileName"] + "<br />");
@@ -122,8 +120,6 @@ function getImages(){
    items.push('<div class="mb-3"><label for="Username" class="form-label">Username</label><input type="text" class="form-control" id="edituserName" </div>')
    items.push('<div class="mb-3"> <label for="UpFile" class="form-label">File to edit</label><input type="file" class="form-control" id="editFile"></div>')
    items.push('<button type="button" id="edit" onclick="editImage(\''+val["id"]+'\')">Edit</button>');
-   alert(x)
-   x = x+1;
    });
    //Clear the assetlist div
    $('#ImageList').empty();
