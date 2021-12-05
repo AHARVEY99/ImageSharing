@@ -108,6 +108,8 @@ function getImages(){
   let x = 1;
    //Iterate through the returned records and build HTML, incorporating the key values of the record in the data
    $.each( data, function( key, val ) {
+    
+     alert(BLOB_ACCOUNT + val["filePath"])
      
    items.push( "<hr />");
    items.push("<img src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400'/> <br />")
