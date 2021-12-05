@@ -5,7 +5,7 @@ baseDAI = "https://prod-222.westeurope.logic.azure.com/workflows/25e8cff2ac09496
 endDAI = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Y8i9O63SOHtPxKnYlne1hu3lrVDFg-W38fY77acaDV4";
 baseEAI="https://prod-50.westeurope.logic.azure.com/workflows/ca43ddb178774ebcac0cbb8d4106d717/triggers/manual/paths/invoke/rest/v1/images/";
 endEAI="?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=B3OOdL7rHds__Y1O_16CZDtKcU3_O2VKXe7Y2CcIV7I";
-signupURL = "https://prod-21.northeurope.logic.azure.com:443/workflows/edc2a3da13e442d191b0ecd3928b6cd1/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=c1QL0nvPY6N_dPhuHbFBEBphmPpUkUBcSIt9q58O4Zo"
+signupURL = "https://prod-64.westeurope.logic.azure.com:443/workflows/92b286fdb976495b95275dc2cfca043c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vd9-Wvi2eTmCFKz0u29bw4vOdZRr__7rhVXX4YyTakI"
 
 
 
