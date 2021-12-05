@@ -85,11 +85,6 @@ function signup(){
      //Post the form data to the endpoint, note the need to set the content type header
       $.ajax({
         url: loginURL,
-        data: submitData,
-        cache: false,
-        enctype: 'application/x-www-form-urlencoded',
-        contentType: false,
-        processData: false,
         type: 'GET',
         beforeSend: function(xhr){
           xhr.setRequestHeader("Authorization","Basic" + btoa(username + ":" + password));
