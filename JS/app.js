@@ -6,8 +6,8 @@ endDAI = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Y8i9O
 baseEAI="https://prod-50.westeurope.logic.azure.com/workflows/ca43ddb178774ebcac0cbb8d4106d717/triggers/manual/paths/invoke/rest/v1/images/";
 endEAI="?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=B3OOdL7rHds__Y1O_16CZDtKcU3_O2VKXe7Y2CcIV7I";
 signupURL = "https://prod-21.northeurope.logic.azure.com:443/workflows/edc2a3da13e442d191b0ecd3928b6cd1/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=c1QL0nvPY6N_dPhuHbFBEBphmPpUkUBcSIt9q58O4Zo"
-loginURL = "https://prod-19.westeurope.logic.azure.com:443/workflows/a0f981c4be61478da3a0d0f20fb1d1e3/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Da0ossdoqNbceuffBZgdW0G5KG4giYoEPJjfF9_c_gE";
-
+baseloginURL = "https://prod-19.westeurope.logic.azure.com/workflows/a0f981c4be61478da3a0d0f20fb1d1e3/triggers/manual/paths/invoke/rest/v1/images/";
+endloginURL = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Da0ossdoqNbceuffBZgdW0G5KG4giYoEPJjfF9_c_gE"
 
 BLOB_ACCOUNT = "https://blobstorageah.blob.core.windows.net";
 
@@ -84,12 +84,8 @@ function signup(){
   password =  ('Password',$("#password").val());
      //Post the form data to the endpoint, note the need to set the content type header
       $.ajax({
-        url: loginURL,
+        url: baseloginURL + username + password + endloginURL,
         type: 'GET',
-        beforeSend: function(xhr){
-          xhr.setRequestHeader("Authorization","Basic" + btoa(username + ":" + password));
-        
-        }
       });
     }
 
