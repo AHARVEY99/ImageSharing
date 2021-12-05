@@ -5,8 +5,8 @@ baseDAI = "https://prod-222.westeurope.logic.azure.com/workflows/25e8cff2ac09496
 endDAI = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Y8i9O63SOHtPxKnYlne1hu3lrVDFg-W38fY77acaDV4";
 baseEAI="https://prod-50.westeurope.logic.azure.com/workflows/ca43ddb178774ebcac0cbb8d4106d717/triggers/manual/paths/invoke/rest/v1/images/";
 endEAI="?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=B3OOdL7rHds__Y1O_16CZDtKcU3_O2VKXe7Y2CcIV7I";
-signupURL = "https://prod-64.westeurope.logic.azure.com:443/workflows/92b286fdb976495b95275dc2cfca043c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vd9-Wvi2eTmCFKz0u29bw4vOdZRr__7rhVXX4YyTakI"
-
+signupURL = "https://prod-21.northeurope.logic.azure.com:443/workflows/edc2a3da13e442d191b0ecd3928b6cd1/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=c1QL0nvPY6N_dPhuHbFBEBphmPpUkUBcSIt9q58O4Zo"
+loginURL = "https://prod-19.westeurope.logic.azure.com:443/workflows/a0f981c4be61478da3a0d0f20fb1d1e3/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Da0ossdoqNbceuffBZgdW0G5KG4giYoEPJjfF9_c_gE";
 
 
 BLOB_ACCOUNT = "https://blobstorageah.blob.core.windows.net";
@@ -44,6 +44,13 @@ $(document).ready(function() {
     
   }); 
 
+  $("#loginForm").click(function(){
+
+    //Execute the register user function
+    login();
+    
+  }); 
+
 
 });
 
@@ -70,6 +77,26 @@ function signup(){
       }
     });
   }
+
+  function login(){
+  
+   username =  ('Username',$('#userName').val());
+  password =  ('Password',$("#password").val());
+     //Post the form data to the endpoint, note the need to set the content type header
+      $.ajax({
+        url: loginURL,
+        data: submitData,
+        cache: false,
+        enctype: 'application/x-www-form-urlencoded',
+        contentType: false,
+        processData: false,
+        type: 'GET',
+        beforeSend: function(xhr){
+          xhr.setRequestHeader("Authorization","Basic" + btoa(username + ":" + password));
+        
+        }
+      });
+    }
 
 //A function to submit a new asset to the REST endpoint
 function submitNewAsset(){
@@ -108,7 +135,7 @@ function getImages(){
   let x = 1;
    //Iterate through the returned records and build HTML, incorporating the key values of the record in the data
    $.each( data, function( key, val ) {
-   
+     alert(BLOB_ACCOUNT + val["filePath"])
    items.push( "<hr />");
    items.push("<img src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400'/> <br />")
    items.push( "File : " + val["fileName"] + "<br />");
