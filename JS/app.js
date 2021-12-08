@@ -163,7 +163,7 @@ function submitNewAsset(){
      users.push( "<hr />");
      users.push(val["UserID"])
      users.push(val["Username"])
-     users.push('<button type="button" id="follow" onclick="followUser(\''+val["UserID"]+'\')">Follow</button>');
+     users.push('<button type="button" class="btn btn-primary" id="follow" onclick="followUser(\''+val["UserID"]+'\')">Follow</button>');
      });
      //Clear the assetlist div
      $('#UserList').empty();
@@ -192,10 +192,10 @@ function getImages(){
    items.push( "File : " + val["fileName"] + "<br />");
    items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+")<br />");
    items.push( "<hr />");
-   items.push('<button type="button" id="Analyse" onclick="analyseimage(\''+val["filePath"]+'\')">Image Description</button><br>');
+   items.push('<button type="button" class="btn btn-primary" id="Analyse" onclick="analyseimage(\''+val["filePath"]+'\')">Image Description</button><br>');
    items.push('<h5>Please Upload a comment.</h5>')
    items.push('<div class="mb-3"><label for="Comment" class="form-label">Comment</label><input type="text" class="form-control" id="Comment" </div>')
-   items.push('<button type="button" id="comment" onclick="addComment(\''+val["id"]+'\')">Comment</button>');
+   items.push('<button type="button" class="btn btn-primary" id="comment" onclick="addComment(\''+val["id"]+'\')">Comment</button>');
    });
    //Clear the assetlist div
    $('#ImageList').empty();
@@ -275,8 +275,8 @@ function getImages(){
      items.push('<button type="button" id="delete" onclick="deleteImage(\''+val["id"]+'\')">Delete</button>');
      items.push('<div class="mb-3"><label for="FileName" class="form-label">File Name</label><input type="text" class="form-control" id="editFileName" </div>')
      items.push('<div class="mb-3"> <label for="UpFile" class="form-label">File to edit</label><input type="file" class="form-control" id="editFile"></div>')
-     items.push('<button type="button" id="edit" onclick="editImage(\''+val["id"]+'\')">Edit</button>');
-     items.push('<button type="button" id="Analyse" onclick="analyseimage(\''+val["filePath"]+'\',)">Analyse</button>');
+     items.push('<button type="button" class="btn btn-primary" id="edit" onclick="editImage(\''+val["id"]+'\')">Edit</button>');
+     items.push('<button type="button" class="btn btn-primary" id="Analyse" onclick="analyseimage(\''+val["filePath"]+'\',)">Analyse</button>');
      x = x+1
      });
      //Clear the assetlist div
