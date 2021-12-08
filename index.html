@@ -18,89 +18,40 @@
   
   <body>
 
-    <a href="reg.html"><button>Signup</button></a><br>
-    <a href="login.html"><button>Login</button></a>
-
-
-    <div  class="container">
-
-        <!--Header-->
-        <div class="row align-items-start">
-            <div class="col-2"  ></div>
-
-            <div class="col-8" style="text-align: center;">
-              <h3>Image Share</h3>
-            </div>
-
-            <div class="col-2"  ></div>
-        </div>
-
-        <!--New Asset Box-->
-        <div class="row align-items-start">
-            <div class="col-2"  ></div>
-
-            <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
-              <p>Add Image</p>
-
-              <form style="font-size: 10pt;" id="newAssetForm">
-                <div class="mb-3">
-                  <label for="FileName" class="form-label">File Name</label>
-                  <input type="text" class="form-control" id="FileName">
-                </div>
-
-                <div class="mb-3">
-                  <label for="UpFile" class="form-label">File to Upload</label>
-                  <input type="file" class="form-control" id="UpFile">
-                </div>
-            
-                <button type="button" id="subNewForm" class="btn btn-primary">Submit</button> <br/><br/>
-                <button type="button" id="subeditForm" class="btn btn-primary">Edit</button> <br/><br/>
-              </form>
-            </div>
-
-            <div class="col-2"  ></div>
-        </div>
-
-        <!-- view Asset Area-->
-        <div class="row align-items-start">
-            <div class="col-2"  ></div>
-
-            <div class="col-8" style="text-align: left;" >
-              <div style="padding:5px;">
-                <button  id = "retImages" type="button" class="btn btn-primary">View Images</button>
-              </div>
-
-              <div id="ImageList">
-
-                <h4>Please click the view Images button if you wish to view images on the system.</h4>
-
-              </div>
-            </div>
-
-            <div class="col-2"  ></div>
-        </div>
-
-    </div>
-
-    <div class="row align-items-start">
-            <div class="col-2"  ></div>
-
-            <div class="col-8" style="text-align: left;" >
-              <div style="padding:5px;">
-                <button  id = "FetchUsers" type="button" class="btn btn-primary">View Users</button>
-              </div>
-
-              <div id="UserList">
-
-                <h4>Please click the view users button if you wish to view users on the system.</h4>
-
-              </div>
-            </div>
-
-            <div class="col-2"  ></div>
-        </div>
-
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reg.html">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="upload.html">Upload Image</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="images.html">Image Feed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MyPosts.html">My Uploads</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="users.html" id="FetchUsers">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comments.html">Comments</a>
+          </li>
+      </div>
+    </nav>
+<h1>Homepage!</h1>
   
   </body>
 </html>
