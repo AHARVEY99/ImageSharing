@@ -103,6 +103,10 @@ function signup(){
         success: function(data){
           sessionStorage.setItem("UserID",JSON.stringify(data["Table1"][0]["UserID"]))
           sessionStorage.setItem("Username",JSON.stringify(data["Table1"][0]["Username"]))
+          alert("Login Successful!")
+          $('#userName').val('')
+          $("#password").val('');
+           
         }
       });
     }
@@ -114,6 +118,7 @@ function signup(){
         url: basefollowUserURL + userid +"/"+ followid + endfollowUserURL,
         type: 'POST',
         success: function(data){
+          alert("You have followed this user, view the image feed to see their posts.")
        
         }
 
@@ -276,8 +281,6 @@ function getImages(){
      items.push('<div class="mb-3"><label for="FileName" class="form-label">File Name</label><input type="text" class="form-control" id="editFileName" </div>')
      items.push('<div class="mb-3"> <label for="UpFile" class="form-label">File to edit</label><input type="file" class="form-control" id="editFile"></div>')
      items.push('<button type="button" class="btn btn-primary" id="edit" onclick="editImage(\''+val["id"]+'\')">Edit</button>');
-     items.push('<button type="button" class="btn btn-primary" id="Analyse" onclick="analyseimage(\''+val["filePath"]+'\',)">Analyse</button>');
-     x = x+1
      });
      //Clear the assetlist div
      $('#MyImageList').empty();
