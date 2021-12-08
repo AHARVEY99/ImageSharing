@@ -277,7 +277,7 @@ function getImages(){
      items.push( "File : " + val["fileName"] + "<br />");
      items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+")<br />");
      items.push( "<hr />");
-     items.push('<button type="button" id="delete" onclick="deleteImage(\''+val["id"]+'\')">Delete</button>');
+     items.push('<button type="button" class="btn btn-primary" id="delete" onclick="deleteImage(\''+val["id"]+'\')">Delete</button>');
      items.push('<div class="mb-3"><label for="FileName" class="form-label">File Name</label><input type="text" class="form-control" id="editFileName" </div>')
      items.push('<div class="mb-3"> <label for="UpFile" class="form-label">File to edit</label><input type="file" class="form-control" id="editFile"></div>')
      items.push('<button type="button" class="btn btn-primary" id="edit" onclick="editImage(\''+val["id"]+'\')">Edit</button>');
